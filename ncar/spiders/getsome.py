@@ -27,11 +27,10 @@ class GetsomeSpider(CrawlSpider):
 
     def parse_item(self, response):
         for l in li:
-            print response.url.find(l['url'][0]),l['url'][0],response.url,type(l['url']),type(response.url.find(l['url'][0]))
+#            print response.url.find(l['url'][0]),l['url'][0],response.url,type(l['url']),type(response.url.find(l['url'][0]))
             #if(l['url']==response.url):
             if(response.url.find(l['url'][0])!=-1):
                 for sel in response.xpath("//td[@class='t_f']/div[3]/a"):
                     l['links'][sel.xpath("text()").extract()[0]]=sel.xpath("@href").extract()[0]
-                    yield l
-
+                yield l
 
