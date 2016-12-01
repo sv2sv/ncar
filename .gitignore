@@ -1,3 +1,7 @@
 # Python:
 *.py[cod]
 *.*~
+ncar/*.py[cod]
+ncar/*.*~
+ncar/spiders/*.py[cod]
+ncar/spiders/*.*~
