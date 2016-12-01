@@ -13,6 +13,3 @@ class NcarItem(scrapy.Item):
     url = scrapy.Field()
     links = scrapy.Field()
 
-class OItem(scrapy.Item):
-    nname = scrapy.Field()
-    urls = scrapy.Field()
